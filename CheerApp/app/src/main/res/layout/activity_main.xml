@@ -7,12 +7,67 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/UsernameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/username"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/ProfileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="true"
+        android:foreground="@drawable/rounded_fg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UsernameText"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/BalanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="91dp"
+        android:text="@string/balance_text"
+        app:layout_constraintEnd_toEndOf="@+id/ProfileImage"
+        app:layout_constraintStart_toStartOf="@+id/ProfileImage"
+        app:layout_constraintTop_toBottomOf="@+id/ProfileImage" />
+
+    <TextView
+        android:id="@+id/BalanceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="37dp"
+        android:text="@string/amount_text"
+        app:layout_constraintEnd_toEndOf="@+id/ProfileImage"
+        app:layout_constraintStart_toStartOf="@+id/ProfileImage"
+        app:layout_constraintTop_toBottomOf="@+id/ProfileImage" />
+
+    <Button
+        android:id="@+id/RechargeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorAppAccent"
+        android:text="@string/recharge_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BalanceText" />
 </android.support.constraint.ConstraintLayout>
